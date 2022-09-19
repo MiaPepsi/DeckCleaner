@@ -1,0 +1,12 @@
+#! /bin/bash
+
+# this script will clear the shadercash folder from your steamdeck
+
+
+ 
+ 
+ if zenity --question --title="Confirm deletion" --text="this program will delete the shadercache folder from your steamdeck.\nif your steamdeck storage is mostly filled with the 'other' datatype in your storage setting, this will likely fix your problem." --no-wrap 
+    then
+    rm -r /home/deck/.steam/steam/steamapps/shadercache
+        zenity --info --title="Success" --text="shadercache folder was sucessfully deleted" --no-wrap
+fi
